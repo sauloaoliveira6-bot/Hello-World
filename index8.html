@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Saulo Galvão">
+    <meta name="keywords" content="Curso de programação">
+    <meta name="description" content="Site dos cursos da Hello World ">
+    <title>Hello World</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <!--fonte Space Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* rolagem suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .topico a {
+            display: block;
+            color: #66BB6A;
+            text-decoration: none;
+        }
+
+        .grade {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 36px;
+            color: #66BB6A;
+            table-layout: fixed;
+            background-color: #0C1115;
+        }
+
+        th,
+        td {
+            border: 1px solid #66BB6A;
+            padding: 8px;
+            text-align: center;
+            font-weight: normal;
+            width: 20%;
+            overflow: hidden;
+            vertical-align: middle;
+        }
+
+        th {
+            height: 100px;
+        }
+
+        td {
+            height: 400px;
+        }
+
+        .logo {
+            font-size: 15px;
+            text-align: left;
+        }
+
+        /* remover as bordas específicas */
+        .sem-borda-cima {
+            border-top: 1px solid transparent !important;
+        }
+
+        .sem-borda-baixo {
+            border-bottom: 1px solid transparent !important;
+        }
+
+        .sem-borda-esquerda {
+            border-left: 1px solid transparent !important;
+        }
+
+        .sem-borda-direita {
+            border-right: 1px solid transparent !important;
+        }
+
+
+
+        /* início CODIGO IA */
+        html {
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .grade,
+        .grade * {
+            font-family: 'Space Mono', 'JetBrains Mono', monospace;
+        }
+
+        .nav-item {
+            font-weight: 700;
+        }
+
+        td {
+            position: relative;
+            overflow: visible;
+        }
+
+        /* Títulos grandes (104px) */
+        .titulo {
+            position: absolute;
+            margin: 0;
+            font-size: 104px;
+            line-height: 90px;
+            font-weight: 700;
+            text-align: left;
+            color: #66BB6A;
+        }
+
+        /* Textos de parágrafo */
+        .texto {
+            position: absolute;
+            margin: 0;
+            font-weight: 400;
+            text-align: left;
+            color: #66BB6A;
+        }
+
+        .texto-40 {
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        .texto-32 {
+            font-size: 32px;
+            line-height: 35px;
+        }
+
+        .subtitulo {
+            font-size: 40px;
+            line-height: 60px;
+            font-weight: 700;
+        }
+
+        /* Títulos dos cards (cursos e planos) */
+        .card-titulo {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0;
+            font-weight: 700;
+            text-align: center;
+            color: #66BB6A;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        .plano-titulo {
+            font-size: 48px;
+        }
+
+        .btn {
+            position: absolute;
+            display: block;
+            width: 168px;
+            height: 65px;
+            background: #66BB6A;
+            color: #000;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 65px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #7bd47f;
+        }
+
+        /* Logos e ícones */
+        .ic {
+            position: absolute;
+            display: block;
+        }
+
+        .ic-128 {
+            width: 128px;
+            height: 128px;
+        }
+
+        .ic-100 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .ic-social {
+            width: 150px;
+            height: 150px;
+            left: 69px;
+            top: 146px;
+        }
+
+        /* Imagens que ultrapassam a célula */
+        .coruja {
+            position: absolute;
+            left: 14px;
+            top: -16px;
+            width: 260px;
+            height: 473px;
+            z-index: 2;
+        }
+
+        .foto-historia {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left center;
+            z-index: 1;
+        }
+
+        /* Caixa do "~/Contatos" (ocupa as colunas 2-4 na parte de baixo da linha) */
+        .caixa-contatos {
+            position: absolute;
+            left: -1px;
+            bottom: -1px;
+            width: calc(300% + 2px);
+            height: 235px;
+            background: #0C1115;
+            border: 1px solid #66BB6A;
+            z-index: 1;
+        }
+
+        .caixa-contatos .titulo {
+            left: 83px;
+            top: 56px;
+            width: 649px;
+        }
+
+        
+
+
+        /* parte mobile (fica no final para vencer as regras de cima) */
+        @media (max-width: 1279px) {
+
+            /* a tabela deixa de ser tabela: tudo vira bloco */
+            .grade,
+            thead,
+            tr,
+            th,
+            td {
+                display: block;
+            }
+
+            /* o corpo vira uma caixa flex: os blocos quebram de linha quando não cabem */
+            tbody {
+                display: flex;
+                flex-wrap: wrap;
+                border-left: 1px solid #66BB6A;
+            }
+
+            /* a largura passa a contar a borda e o espaço de dentro */
+            tr,
+            th,
+            td {
+                box-sizing: border-box;
+                width: 100%;
+                height: auto;
+            }
+
+            /* cabeçalho: o logo em cima e o menu em 2 colunas */
+            thead tr {
+                display: flex;
+                flex-wrap: wrap;
+                border-top: 1px solid #66BB6A;
+                border-left: 1px solid #66BB6A;
+            }
+
+            th {
+                width: 50%;
+                padding: 8px;
+                border-width: 0 1px 1px 0;
+                font-size: 20px;
+            }
+
+            th:first-child {
+                width: 100%;
+                padding: 12px 20px;
+            }
+
+            .logo {
+                font-size: 12px;
+            }
+
+            .topico a {
+                padding: 12px 0;
+            }
+
+            /* células do corpo: só a borda de baixo e da direita */
+            td {
+                padding: 24px 20px;
+                border-width: 0 1px 1px 0;
+            }
+
+            .sem-borda-direita {
+                border-right: 1px solid #66BB6A !important;
+            }
+
+            /* esconde as células vazias */
+            td:empty {
+                display: none !important;
+            }
+
+            /* textos: saem de position absolute e voltam para a linha normal */
+            .titulo,
+            .texto {
+                position: static !important;
+                width: auto !important;
+            }
+
+            .titulo {
+                font-size: 34px;
+                line-height: 1.1;
+            }
+
+            .texto-40 {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            .texto-32 {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .texto-32 p {
+                margin-bottom: 20px !important;
+            }
+
+            .subtitulo {
+                font-size: 17px;
+                line-height: 1.4;
+            }
+
+            /* imagens grandes */
+            .coruja {
+                position: static;
+                display: block;
+                width: 110px;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            .foto-historia {
+                position: static;
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+            }
+
+            /* ícones e botões saem de position absolute */
+            .card-titulo,
+            .ic,
+            .btn {
+                position: static !important;
+            }
+
+            .ic {
+                display: inline-block;
+                width: 60px !important;
+                height: 60px !important;
+            }
+
+            .btn {
+                width: 100%;
+                height: 46px;
+                margin: 14px 0 0;
+                font-size: 16px;
+                line-height: 46px;
+            }
+
+            .card-titulo {
+                font-size: 17px;
+                line-height: 1.2;
+            }
+
+            /* cursos: a linha some e os cards ficam 2 por linha */
+            .linha-cards {
+                display: contents;
+            }
+
+            .linha-cards td {
+                width: 50%;
+                padding: 16px 8px;
+            }
+
+            /* planos: ícone e nome lado a lado, botão embaixo */
+            .linha-planos td {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            .linha-planos .ic {
+                order: -1;
+                width: 56px !important;
+                height: 56px !important;
+            }
+
+            .linha-planos .card-titulo {
+                flex: 1;
+                margin: 0 0 0 16px;
+                font-size: 26px;
+                text-align: left;
+            }
+
+            .linha-planos .btn {
+                height: 52px;
+                margin-top: 16px;
+                font-size: 18px;
+                line-height: 52px;
+            }
+
+            /* contatos: a linha some e os ícones ficam 4 por linha */
+            .caixa-contatos {
+                position: static;
+                width: auto;
+                height: auto;
+                border: 0;
+            }
+
+            .linha-redes {
+                display: contents;
+            }
+
+            .linha-redes td {
+                order: 1;
+                width: 25%;
+                padding: 20px 0;
+            }
+
+            .linha-redes .titulo-contatos {
+                order: 0;
+                width: 100%;
+                padding: 24px 20px;
+            }
+
+            .linha-redes .ic {
+                display: block;
+                width: 48px !important;
+                height: 48px !important;
+                margin: 0 auto;
+            }
+
+        }
+
+        /* fIM CODIGO DE IA */
+    </style>
+</head>
+
+<body style="background-color: #0C1115;">
+
+    <table class="grade">
+        <thead>
+            <tr>
+                <th>
+                    <div class="logo">
+                        #include &lt;stdio.h&gt;<br>
+                        int main(){ <br>
+                        &nbsp;&nbsp;printf("Hello, World!\n"); <br>
+                        &nbsp;&nbsp;return 0; <br>
+                        }
+                    </div>
+                </th>
+                <th>
+                    <div class="cell topico"><a href="#cursos">~/cursos</a></div>
+                </th>
+                <th>
+                    <div class="cell topico"><a href="#empresa">~/empresa</a></div>
+                </th>
+                <th>
+                    <div class="cell topico"><a href="#planos">~/planos</a></div>
+                </th>
+                <th>
+                    <div class="cell topico"><a href="#contatos">~/contatos</a></div>
+                </th>
+            </tr>
+        </thead>
+        <tbody class="sem-borda-direita">
+            <!-- apresentação do site com a barra de cima -->
+            <tr>
+
+                <td class="sem-borda-direita">
+                    <h1 class="titulo" style="left:36px; top:35px; width:475%;">~/Todo grande sistema começou com uma
+                        linha.</h1>
+                </td>
+                <td class="sem-borda-direita "></td>
+                <td class="sem-borda-direita"></td>
+                <td class="sem-borda-direita"></td>
+                <td class="sem-borda-esquerda"></td>
+            </tr>
+            <tr>
+
+                <td class="sem-borda-direita">
+                    <p class="texto texto-40" style="left:59px; top:37px; width:353%;">Programar não é um dom. É uma
+                        habilidade. E como toda habilidade, se aprende com método, prática e quem já passou por isso.
+                        Aqui você vai do zero ao seu primeiro projeto real, com didática que respeita o seu ritmo e uma
+                        comunidade que cresce junto.</p>
+                </td>
+                <td class="sem-borda-direita"></td>
+                <td class="sem-borda-direita"></td>
+                <td></td>
+                <td><img class="coruja" src="assets/mascote.png" alt="Coruja mascote da Hello World"></td>
+            </tr>
+
+            <!-- Linguagens de programação e cursos-->
+                <tr id="cursos">
+
+                <td class="sem-borda-esquerda sem-borda-baixo"></td>
+                <td class="sem-borda-direita ">
+                    <h2 class="titulo" style="left:64px; top:50px; width:225%;">~/Conheça nosso cursos</h2>
+                </td>
+                <td class="sem-borda-direita "></td>
+                <td></td>
+                <td class="sem-borda-direita sem-borda-baixo"></td>
+            </tr>
+            <tr class="linha-cards">
+
+                <td class="sem-borda-cima sem-borda-esquerda sem-borda-baixo"></td>
+                <td>
+                    <h3 class="card-titulo" style="top:45px;">~/javascript</h3>
+                    <img class="ic ic-128" style="left:80px; top:141px;" src="assets/javascript.svg" alt="JavaScript">
+                    <a class="btn" style="left:69px; bottom:43px;" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">Entre</a>
+                </td>
+                <td>
+                    <h3 class="card-titulo" style="top:36px;">~/HTML e CSS</h3>
+                    <img class="ic ic-128" style="left:12px; top:142px;" src="assets/html5.svg" alt="HTML5">
+                    <img class="ic ic-128" style="left:151px; top:142px;" src="assets/css3.svg" alt="CSS3">
+                    <a class="btn" style="left:60px; bottom:43px;" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">Entre</a>
+                </td>
+                <td>
+                    <h3 class="card-titulo" style="top:36px;">~/C e C++</h3>
+                    <img class="ic ic-128" style="left:16px; top:139px;" src="assets/c.svg" alt="C">
+                    <img class="ic ic-128" style="left:144px; top:137px;" src="assets/cplusplus.svg" alt="C++">
+                    <a class="btn" style="left:60px; bottom:43px;" href="https://en.cppreference.com/w/" target="_blank">Entre</a>
+                </td>
+                <td class="sem-borda-cima sem-borda-direita sem-borda-baixo"></td>
+            </tr>
+            <tr class="linha-cards">
+
+                <td class="sem-borda-esquerda "></td>
+                <td>
+                    <h3 class="card-titulo" style="top:41px;">~/python</h3>
+                    <img class="ic ic-128" style="left:80px; top:129px;" src="assets/python.svg" alt="Python">
+                    <a class="btn" style="left:60px; bottom:63px;" href="https://docs.python.org/pt-br/3/" target="_blank">Entre</a>
+                </td>
+                <td>
+                    <h3 class="card-titulo" style="top:41px;">~/java</h3>
+                    <img class="ic ic-128" style="left:80px; top:115px;" src="assets/java.svg" alt="Java">
+                    <a class="btn" style="left:60px; bottom:63px;" href="https://docs.oracle.com/en/java/javase/" target="_blank">Entre</a>
+                </td>
+                <td>
+                    <h3 class="card-titulo" style="top:44px;">E mais</h3>
+                    <img class="ic" style="left:68px; top:105px; width:152px; height:152px;" src="assets/icon-plus.svg"
+                        alt="Mais cursos">
+                    <a class="btn" style="left:60px; bottom:63px;" href="https://soumaiscard.com.br/">Entre</a>
+                </td>
+                <td class="sem-borda-direita "></td>
+            </tr>
+
+            <!-- Sobre os donos filhinhos do papai do site -->
+            <tr id="empresa">
+
+                <td class="sem-borda-direita">
+                    <h2 class="titulo" style="left:37px; top:31px; width:265%;">~/Conheça nossa história</h2>
+                </td>
+                <td class="sem-borda-direita"></td>
+                <td class="sem-borda-esquerda"></td>
+                <td class="sem-borda-direita">
+                    <img class="foto-historia" src="assets/historia.png" alt="Pessoas programando juntas">
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="sem-borda-direita">
+                    <div class="texto texto-32" style="left:29px; top:7px; width:488%;">
+                        <p style="margin:0;">Nós somos os fundadores da HELLO WORLD e, assim como você, começamos
+                            absolutamente do zero. Deixamos o conforto dos nossos privilégios para trás e encaramos a
+                            vida real. Não foi fácil: passamos noites em claro, trabalhando até 14 horas por semana,
+                            sacrificando festas em iates para criar o método definitivo de programação.</p>
+                        <p style="margin:0;">Cada linha de código que você aprenderá aqui foi gerada pelo nosso suor e
+                            pelo puro mindset de quem acorda às 5 da manhã. O caminho para o sucesso não aceita atalhos,
+                            apenas foco, resiliência e, claro, um pequeno aporte inicial de 5 milhões de dólares que
+                            recebemos de nossos pais. Invista no seu futuro com quem realmente sabe o que é vencer na
+                            vida através do próprio esforço!</p>
+                    </div>
+                </td>
+                <td class="sem-borda-direita "></td>
+                <td class="sem-borda-direita"></td>
+                <td class="sem-borda-direita"></td>
+                <td class="sem-borda-esquerda"></td>
+            </tr>
+
+            <!-- precificação e planos -->
+            <tr id="planos">
+
+                <td></td>
+                <td></td>
+                <td class="sem-borda-direita">
+                    <h2 class="titulo" style="left:0; top:132px; width:182%;">~/Planos</h2>
+                    <p class="texto subtitulo" style="left:0; top:251px; width:292%;">Esses são os planos da hello world
+                    </p>
+                </td>
+                <td class="sem-borda-direita"></td>
+                <td class="sem-borda-esquerda"></td>
+            </tr>
+            <tr class="linha-planos">
+
+                <td></td>
+                <td>
+                    <h3 class="card-titulo plano-titulo" style="top:59px;">~Básico</h3>
+                    <img class="ic ic-100" style="left:94px; top:171px;" src="assets/heart.svg" alt="">
+                    <a class="btn" style="left:54px; bottom:30px;" href="#">ASSINE</a>
+                </td>
+                <td>
+                    <h3 class="card-titulo plano-titulo" style="top:61px;">~Master</h3>
+                    <img class="ic ic-100" style="left:94px; top:171px;" src="assets/flash.svg" alt="">
+                    <a class="btn" style="left:60px; bottom:28px;" href="https://www.bancomaster.com.br/">ASSINE</a>
+                </td>
+                <td>
+                    <h3 class="card-titulo plano-titulo" style="top:66px;">~/Premium</h3>
+                    <img class="ic ic-100" style="left:94px; top:171px;" src="assets/globe.svg" alt="">
+                    <a class="btn" style="left:60px; bottom:28px;" href="#">ASSINE</a>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+
+                <td class="sem-borda-direita"></td>
+                <td class="sem-borda-direita"></td>
+                <td class="sem-borda-esquerda"></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <!-- Redes sociais -->
+            <tr class="linha-redes">
+
+                <td><img class="ic ic-social" src="assets/twitch.svg" alt="Twitch"></td>
+                <td class="titulo-contatos" id="contatos">
+                    <div class="caixa-contatos">
+                        <h2 class="titulo">~/Contatos</h2>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td><img class="ic ic-social" src="assets/reddit.svg" alt="Reddit"></td>
+            </tr>
+
+            <tr class="linha-redes">
+
+                <td><img class="ic ic-social" src="assets/github.svg" alt="GitHub"></td>
+                <td><img class="ic ic-social" src="assets/facebook.svg" alt="Facebook"></td>
+                <td><img class="ic" style="left:-0.17%; top:-0.11%; width:100.34%; height:100.22%;" src="assets/x.svg" alt="X"></td>
+                <td><img class="ic ic-social" src="assets/instagram.svg" alt="Instagram"></td>
+                <td><img class="ic ic-social" src="assets/bluesky.svg" alt="Bluesky"></td>
+            </tr>
+
+
+            <tr class="linha-redes">
+
+                <td><img class="ic ic-social" src="assets/discord.svg" alt="Discord"></td>
+                <td><img class="ic ic-social" src="assets/youtube.svg" alt="YouTube"></td>
+                <td><img class="ic ic-social" src="assets/linkedin.svg" alt="LinkedIn"></td>
+                <td><img class="ic ic-social" src="assets/whatsapp.svg" alt="WhatsApp"></td>
+                <td><img class="ic ic-social" src="assets/tiktok.svg" alt="TikTok"></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
